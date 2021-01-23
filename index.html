@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.less">
+    <title>название.</title>
+</head>
+<body>
+
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet/less" type="text/css" href="styles.less"/>
+<script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
+<script src="./scripts.js"></script>
+
+
+<div id='home' class='wrapper'>
+    <div class="container">
+        <div class='logo'><img src="./img/ruso-logo.png" alt=""></div>
+
+        <div class='text'>Сделаем <u>быстрый сайт</u> для Вашего бизнеса. <br/>Без конструкторов. По всем стандартам.
+            Без
+            лишних слов.
+        </div>
+
+        <div class="form-wrapper">
+            <div class="form__close-btn" onclick="closeForm()">×</div>
+            <h3>Правильное решение</h3>
+        </div>
+        <div onclick="openForm()" class='order-btn'>ЗАКАЗАТЬ САЙТ</div>
+
+    </div>
+
+    <div class="anchors-wrapper">
+        <div onclick="document.querySelector('#home').scrollIntoView({behavior: 'smooth'})">главная.</div>
+        <div onclick="document.querySelector('#portfolio').scrollIntoView({behavior: 'smooth'})">портфолио.</div>
+        <div>услуги и цены.</div>
+    </div>
+
+</div>
+
+<div id='portfolio' class='portfolio-wrapper'>
+
+    <div class='portfolio__heading'>портфолио.</div>
+
+    <div class='card'>
+        <img src="./img/luch-bar.png" alt="">
+        <div>
+            <h4>luchbar</h4>
+            <!--            <p></p>-->
+        </div>
+    </div>
+
+    <div class='card'>
+        <img src="./img/nefteprodukty.png" alt="">
+        <div>
+            <h4>форсаж</h4>
+            <!--            <p>описание какое-т  </p>-->
+        </div>
+    </div>
+
+
+</div>
+
+
+</body>
+</html>

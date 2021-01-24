@@ -14,18 +14,25 @@
 <script src="./scripts.js"></script>
 
 
-<div id='home' class='wrapper'>
+<div id='home' class='home-wrapper'>
     <div class="container">
         <div class='logo'><img src="./img/ruso-logo.png" alt=""></div>
 
         <div class='text'>Сделаем <u>быстрый сайт</u> для Вашего бизнеса. <br/>Без конструкторов. По всем стандартам.
-            Без
-            лишних слов.
+            Без лишних слов.
         </div>
 
         <div class="form-wrapper">
             <div class="form__close-btn" onclick="closeForm()">×</div>
             <h3>Правильное решение</h3>
+            <form class="form">
+                <input id="name-input" type="text" name="name">
+                <label for="name-input">Ваше имя</label>
+
+                <input id="phone-input" type="number" name="phone">
+                <label for="phone-input">Ваш телефон</label>
+
+            </form>
         </div>
         <div onclick="openForm()" class='order-btn'>ЗАКАЗАТЬ САЙТ</div>
 
@@ -43,7 +50,7 @@
 
     <div class='portfolio__heading'>портфолио.</div>
 
-    <div class='card'>
+    <div class='portfolio__card'>
         <img src="./img/luch-bar.png" alt="">
         <div>
             <h4>luchbar</h4>
@@ -51,7 +58,7 @@
         </div>
     </div>
 
-    <div class='card'>
+    <div class='portfolio__card'>
         <img src="./img/nefteprodukty.png" alt="">
         <div>
             <h4>форсаж</h4>
@@ -59,6 +66,21 @@
         </div>
     </div>
 
+    <div class='portfolio__card'>
+        <img src="./img/vyshe-kryshi.png" alt="">
+        <div>
+            <h4>выше крыши</h4>
+            <!--            <p>описание какое-т  </p>-->
+        </div>
+    </div>
+
+    <div class='portfolio-card'>
+        <img src="./img/muzhskaya-territoriya.png" alt="">
+        <div>
+            <h4>мужская территория</h4>
+            <!--            <p>описание какое-т  </p>-->
+        </div>
+    </div>
 
 </div>
 

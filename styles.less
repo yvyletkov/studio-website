@@ -2,6 +2,11 @@
   font-family: 'Montserrat', sans-serif;
 }
 
+:active, :hover, :focus {
+  outline: 0;
+  outline-offset: 0;
+}
+
 a {
   text-decoration: none;
   color: inherit;
@@ -12,7 +17,7 @@ a {
   }
 }
 
-.wrapper {
+.home-wrapper {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -59,13 +64,14 @@ a {
     padding-top: 0;
     bottom: 0;
     transform: translateY(-20px);
-    background-color: black;
+    background-color: #000;
+    background-color: #000;
     border-radius: 50%;
     transition: all 300ms;
 
     &.active {;
       transform: translateY(120px);
-      padding-top: 100px;
+      padding: 100px 120px 0;
       width: 700px;
       height: 700px;
 
@@ -95,6 +101,42 @@ a {
         color: #5b5b5b;
       }
     }
+
+
+    .form {
+      box-sizing: border-box;
+      margin-top: 80px;
+      width: 100%;
+      padding: 0 50px;
+
+      input {
+        margin-bottom: 20px;
+        width: 100%;
+        height: 40px;
+        border: none;
+        border-bottom: 2px solid #fff;
+        background: none;
+        + label {
+          display: block;
+          transition: all 300ms;
+          font-size: 15px;
+          position: relative;
+          top: -60px;
+          &.minified {
+            top: -80px;
+            font-size: 12px;
+          }
+        }
+
+        &:focus {
+          + label {
+            top: -80px;
+            font-size: 12px;
+          }
+        }
+      }
+
+    }
   }
 
   .order-btn {
@@ -117,6 +159,13 @@ a {
       color: #fff;
       border: 3px solid #fff;
       transform: translateY(50px);
+
+      &:hover {
+        background-color: #fff;
+        color: #000;
+        border: 3px solid #ffffff;
+
+      }
     }
   }
 }
@@ -134,7 +183,7 @@ a {
     margin-top: 10px;
   }
 
-  .card {
+  .portfolio__card {
     max-width: 1000px;
     width: 100%;
     height: 280px;

@@ -28,9 +28,9 @@ const openForm = () => {
     document.querySelector('.label-icon:nth-of-type(2)').style.opacity = '0';
     document.querySelector('.label-icon:nth-of-type(3)').style.opacity = '0';
     setTimeout(() => unfade(document.querySelector('.contact-us')), 500);
-    setTimeout(() => unfade(document.querySelector('.label-icon:nth-of-type(1)')), 800);
-    setTimeout(() => unfade(document.querySelector('.label-icon:nth-of-type(2)')), 1000);
-    setTimeout(() => unfade(document.querySelector('.label-icon:nth-of-type(3)')), 1200);
+    setTimeout(() => unfade(document.querySelector('.label-icon:nth-of-type(1)')), 900);
+    setTimeout(() => unfade(document.querySelector('.label-icon:nth-of-type(2)')), 1200);
+    setTimeout(() => unfade(document.querySelector('.label-icon:nth-of-type(3)')), 1500);
     document.querySelector('.order-btn').removeEventListener('click', openForm)
 
 

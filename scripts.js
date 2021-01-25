@@ -10,7 +10,7 @@ window.onload = () => {
 
     })
 
-    document.querySelectorAll('.form input').forEach(el => el.addEventListener('change', (e) => {
+    document.querySelectorAll('.form-block__form input').forEach(el => el.addEventListener('change', (e) => {
         e.target.nextSibling.nextElementSibling.classList.add('minified')
     }))
 

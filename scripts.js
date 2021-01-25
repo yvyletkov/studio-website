@@ -1,7 +1,5 @@
 window.onload = () => {
 
-    console.log()
-
     window.addEventListener('scroll', () => {
 
         const anchorsEl =  document.querySelector('.anchors-wrapper')
@@ -18,15 +16,10 @@ window.onload = () => {
 }
 
 const openForm = () => {
-    document.querySelector('.form-block').classList.add('active')
+    document.querySelectorAll('.form-block, .order-btn').forEach(e => e.classList.add('active'))
     document.querySelector('.home__container__text').classList.add('hidden')
-    document.querySelector('.order-btn').classList.add('active')
-    document.querySelector('.label-icon:nth-of-type(1)').style.display = 'flex';
-    document.querySelector('.label-icon:nth-of-type(2)').style.display = 'flex';
-    document.querySelector('.label-icon:nth-of-type(3)').style.display = 'flex';
-    document.querySelector('.label-icon:nth-of-type(1)').style.opacity = '0';
-    document.querySelector('.label-icon:nth-of-type(2)').style.opacity = '0';
-    document.querySelector('.label-icon:nth-of-type(3)').style.opacity = '0';
+    document.querySelectorAll('.label-icon').forEach(e => e.style.display = 'flex')
+    document.querySelectorAll('.label-icon').forEach(e => e.style.opacity = '0')
     setTimeout(() => unfade(document.querySelector('.contact-us')), 500);
     setTimeout(() => unfade(document.querySelector('.label-icon:nth-of-type(1)')), 900);
     setTimeout(() => unfade(document.querySelector('.label-icon:nth-of-type(2)')), 1200);
@@ -41,9 +34,7 @@ const closeForm = () => {
     document.querySelector('.home__container__text').classList.remove('hidden')
     document.querySelector('.order-btn').classList.remove('active')
     document.querySelector('.contact-us').style.opacity = '0';
-    document.querySelector('.label-icon:nth-of-type(1)').style.display = 'none';
-    document.querySelector('.label-icon:nth-of-type(2)').style.display = 'none';
-    document.querySelector('.label-icon:nth-of-type(3)').style.display = 'none';
+    document.querySelectorAll('.label-icon').forEach(e => e.style.display = 'none')
     document.querySelector('.order-btn').addEventListener('click', openForm)
 }
 

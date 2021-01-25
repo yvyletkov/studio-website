@@ -1,4 +1,7 @@
 window.onload = () => {
+
+    console.log()
+
     window.addEventListener('scroll', () => {
 
         const anchorsEl =  document.querySelector('.anchors-wrapper')
@@ -10,18 +13,38 @@ window.onload = () => {
     document.querySelectorAll('.form input').forEach(el => el.addEventListener('change', (e) => {
         e.target.nextSibling.nextElementSibling.classList.add('minified')
     }))
+
+    document.querySelector('.order-btn').addEventListener('click', openForm)
 }
 
 const openForm = () => {
     document.querySelector('.form-block').classList.add('active')
     document.querySelector('.home__container__text').classList.add('hidden')
     document.querySelector('.order-btn').classList.add('active')
+    document.querySelector('.label-icon:nth-of-type(1)').style.display = 'flex';
+    document.querySelector('.label-icon:nth-of-type(2)').style.display = 'flex';
+    document.querySelector('.label-icon:nth-of-type(3)').style.display = 'flex';
+    document.querySelector('.label-icon:nth-of-type(1)').style.opacity = '0';
+    document.querySelector('.label-icon:nth-of-type(2)').style.opacity = '0';
+    document.querySelector('.label-icon:nth-of-type(3)').style.opacity = '0';
+    setTimeout(() => unfade(document.querySelector('.contact-us')), 500);
+    setTimeout(() => unfade(document.querySelector('.label-icon:nth-of-type(1)')), 800);
+    setTimeout(() => unfade(document.querySelector('.label-icon:nth-of-type(2)')), 1000);
+    setTimeout(() => unfade(document.querySelector('.label-icon:nth-of-type(3)')), 1200);
+    document.querySelector('.order-btn').removeEventListener('click', openForm)
+
+
 }
 
 const closeForm = () => {
     document.querySelector('.form-block').classList.remove('active')
     document.querySelector('.home__container__text').classList.remove('hidden')
     document.querySelector('.order-btn').classList.remove('active')
+    document.querySelector('.contact-us').style.opacity = '0';
+    document.querySelector('.label-icon:nth-of-type(1)').style.display = 'none';
+    document.querySelector('.label-icon:nth-of-type(2)').style.display = 'none';
+    document.querySelector('.label-icon:nth-of-type(3)').style.display = 'none';
+    document.querySelector('.order-btn').addEventListener('click', openForm)
 }
 
 function fade(element) {
@@ -29,7 +52,7 @@ function fade(element) {
     let timer = setInterval(function () {
         if (op <= 0.1){
             clearInterval(timer);
-            element.style.display = 'none';
+            element.style.opacity = '0';
         }
         element.style.opacity = op;
         element.style.filter = 'alpha(opacity=' + op * 100 + ")";
@@ -39,7 +62,7 @@ function fade(element) {
 
 function unfade(element) {
     let op = 0.1;
-    element.style.display = 'block';
+    element.style.display = 'flex';
     let timer = setInterval(function () {
         if (op >= 1){
             clearInterval(timer);

@@ -207,17 +207,20 @@ a {
     position: relative;
     font-weight: 700;
     padding: 1rem 1.5rem;
-    border: 2px solid black;
     border-radius: 5px;
     font-size: 18px;
     transition: all 300ms;
     cursor: pointer;
     top: 0;
-    background-color: #fff;
+    border: 2px solid black;
+    background-color: #000;
+    color: #fff;
+
 
     &:hover {
-      background-color: #000;
-      color: #fff;
+      background-color: #fff;
+      border: 2px solid black;
+      color: #000;
       animation: shake 0.8s infinite linear;
       transform-origin:50% 50%;
     }
@@ -242,7 +245,7 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 100px;
+  padding-top: 110px;
 
   &__heading {
     font-size: 40px;
@@ -256,8 +259,11 @@ a {
     max-width: 1000px;
     width: 100%;
     height: 280px;
-    margin-bottom: 80px;
     align-items: center;
+
+    &:not(:last-child) {
+      margin-bottom: 80px;
+    }
 
     @media (max-width: 767px) {
       flex-direction: column;
@@ -275,9 +281,12 @@ a {
     }
 
     h4 {
+      background-color: black;
+      color: #fff;
       font-size: 25px;
       font-weight: 600;
       margin-bottom: 20px;
+      width: fit-content;
     }
 
     p {
@@ -304,6 +313,8 @@ a {
 
       div:first-child {
         font-size: 40px;
+        color: #c35046;
+        font-weight: 600;
       }
 
       div:last-child {
@@ -319,16 +330,12 @@ a {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  .title {
-    padding: 40px 0;
-  }
+  padding-top: 110px;
 
   .heading {
     font-size: 40px;
     font-weight: 600;
     margin-bottom: 60px;
-    margin-top: 10px;
   }
 
   .content {
@@ -439,14 +446,15 @@ a {
     position: fixed;
     bottom: 0;
     width: fit-content;
-    top: 60px;
+    top: 0;
     right: 10px;
     flex-flow: column;
     text-align: right;
 
     div {
       margin: 0 18px;
-      font-size: 30px;
+      font-size: 25px;
+
     }
   }
 
@@ -484,6 +492,15 @@ a {
   100% {
     opacity: 100%;
   }
+}
+
+.scroll-progress-bar {
+  background-color: #c35046;
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 5px;
+  z-index: 100;
 }
 
 

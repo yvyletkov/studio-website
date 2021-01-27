@@ -1,10 +1,22 @@
 window.onload = () => {
 
-    window.addEventListener('scroll', () => {
+    let pageHeight = Math.max(
+        document.body.scrollHeight, document.documentElement.scrollHeight,
+        document.body.offsetHeight, document.documentElement.offsetHeight,
+        document.body.clientHeight, document.documentElement.clientHeight
+    ) - window.innerHeight
 
-        const anchorsEl =  document.querySelector('.anchors-wrapper')
-        if (window.pageYOffset > (window.innerHeight - 30)) anchorsEl.classList.add('fixed')
+
+    window.addEventListener('scroll', () => {
+        let scrollHeight = window.pageYOffset;
+
+        const anchorsEl = document.querySelector('.anchors-wrapper')
+        if (scrollHeight > (window.innerHeight - 30)) anchorsEl.classList.add('fixed')
         else anchorsEl.classList.remove('fixed')
+
+        document.querySelector('.scroll-progress-bar').style.width = `${scrollHeight / pageHeight * 100}vw`;
+
+        console.log(`${scrollHeight / pageHeight * 100}vw`)
 
     })
 
@@ -13,6 +25,8 @@ window.onload = () => {
     }))
 
     document.querySelector('.order-btn').addEventListener('click', openForm)
+
+
 }
 
 const openForm = () => {
@@ -41,7 +55,7 @@ const closeForm = () => {
 function fade(element) {
     let op = 1;
     let timer = setInterval(function () {
-        if (op <= 0.1){
+        if (op <= 0.1) {
             clearInterval(timer);
             element.style.opacity = '0';
         }
@@ -55,7 +69,7 @@ function unfade(element) {
     let op = 0.1;
     element.style.display = 'flex';
     let timer = setInterval(function () {
-        if (op >= 1){
+        if (op >= 1) {
             clearInterval(timer);
         }
         element.style.opacity = op;
@@ -63,3 +77,9 @@ function unfade(element) {
         op += op * 0.1;
     }, 10);
 }
+
+let scrollHeight = Math.max(
+    document.body.scrollHeight, document.documentElement.scrollHeight,
+    document.body.offsetHeight, document.documentElement.offsetHeight,
+    document.body.clientHeight, document.documentElement.clientHeight
+);

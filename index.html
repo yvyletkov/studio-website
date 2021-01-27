@@ -13,6 +13,14 @@
 </head>
 <body>
 
+<div class="scroll-progress-bar"></div>
+
+<div class="anchors-wrapper">
+    <div onclick="document.querySelector('#home').scrollIntoView({behavior: 'smooth'})">главная.</div>
+    <div onclick="document.querySelector('#portfolio').scrollIntoView({behavior: 'smooth'})">портфолио.</div>
+    <div onclick="document.querySelector('#services').scrollIntoView({behavior: 'smooth'})">услуги и цены.</div>
+</div>
+
 <div id='home' class='home'>
     <div class="home__container">
         <div class='home__container__logo'><img src="./img/ruso-logo.png" alt=""></div>
@@ -51,11 +59,7 @@
 
     </div>
 
-    <div class="anchors-wrapper">
-        <div onclick="document.querySelector('#home').scrollIntoView({behavior: 'smooth'})">главная.</div>
-        <div onclick="document.querySelector('#portfolio').scrollIntoView({behavior: 'smooth'})">портфолио.</div>
-        <div onclick="document.querySelector('#services').scrollIntoView({behavior: 'smooth'})">услуги и цены.</div>
-    </div>
+
 
 </div>
 
@@ -153,7 +157,7 @@
 </section>
 
 <section class="services" id="services">
-    <h2 class="title">Услуги и цены.</h2>
+    <h2 class="heading">услуги и цены.</h2>
 
     <div class="content">
         <p class="content-title">лендинг.</p>

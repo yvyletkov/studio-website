@@ -31,7 +31,7 @@ window.onload = () => {
 
 const openForm = () => {
     document.querySelectorAll('.form-block, .order-btn').forEach(e => e.classList.add('active'))
-    document.querySelector('.home__container__text').classList.add('hidden')
+    document.querySelector('.home-container__text').classList.add('hidden')
     document.querySelectorAll('.label-icon').forEach(e => e.style.display = 'flex')
     document.querySelectorAll('.label-icon').forEach(e => e.style.opacity = '0')
     setTimeout(() => unfade(document.querySelector('.contact-us')), 500);
@@ -45,7 +45,7 @@ const openForm = () => {
 
 const closeForm = () => {
     document.querySelector('.form-block').classList.remove('active')
-    document.querySelector('.home__container__text').classList.remove('hidden')
+    document.querySelector('.home-container__text').classList.remove('hidden')
     document.querySelector('.order-btn').classList.remove('active')
     document.querySelector('.contact-us').style.opacity = '0';
     document.querySelectorAll('.label-icon').forEach(e => e.style.display = 'none')

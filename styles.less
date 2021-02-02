@@ -529,9 +529,12 @@ a {
             -13px -13px 26px #ffffff;
           background: #f1f1f1;
 
+          .services-item__circle {
+            width: 150%;
+            height: 150%;
+          }
 
-          &__name {
-            transform: scale(1.02);
+          .services-item__name {
             color: #cd4c63;
           }
 
@@ -551,6 +554,29 @@ a {
           font-weight: 600;
           transition: all 300ms;
           line-height: 1;
+        }
+
+        &__circle {
+          position: absolute;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          background-color: #d4d4d4;
+          width: 0px;
+          height: 0px;
+          border-radius: 50%;
+          transition: all 300ms;
+          z-index: 10;
+          overflow: hidden;
+
+          * {
+            white-space: nowrap;
+            color: #fff;
+            font-size: 20px;
+          }
         }
 
         &__emoji {

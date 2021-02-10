@@ -54,7 +54,6 @@ a {
     width: 100%;
     display: flex;
     position: relative;
-    flex-direction: column;
     align-items: flex-start;
 
   }
@@ -73,7 +72,6 @@ a {
     p:first-child {
       font-size: 65px;
       margin-bottom: 30px;
-
     }
 
     p:not(:first-child) {
@@ -135,17 +133,12 @@ a {
 
   zoom: 0.8;
   box-sizing: border-box;
-  position: absolute;
-  width: 0px;
-  height: 0px;
-  padding-top: 0;
-  bottom: 0;
-  opacity: 0;
-  transform: translateY(-20px);
-  background-color: #000;
-  border-radius: 50%;
+  background-color: #d44e67;
+  border-radius: 50px;
   transition: padding 300ms, width 300ms, height 300ms, transform 300ms, opacity 300ms;
-  z-index: -1;
+  z-index: 1;
+  opacity: 1;
+  padding: 60px;
 
   &.active {
     z-index: 1;
@@ -165,12 +158,10 @@ a {
     white-space: nowrap;
     text-align: center;
     font-size: 32px;
-    margin-top: 37px;
     font-weight: 600;
   }
 
   &__close-btn {
-    opacity: 0;
     color: #000;
     position: absolute;
     top: 40px;
@@ -198,7 +189,6 @@ a {
     padding: 0 50px;
 
     .contact-us {
-      opacity: 0;
       margin-top: 10px;
       font-size: 22px;
       text-align: center;
@@ -238,6 +228,7 @@ a {
       display: flex;
       justify-content: space-between;
       padding: 0 70px;
+      margin-bottom: 30px;
 
       .icon-input {
         width: 35px;
@@ -256,7 +247,6 @@ a {
         //background-color: #fff;
         //border-radius: 5px;
         filter: invert();
-        opacity: 0;
         display: flex;
         width: 45px;
         height: 45px;
@@ -274,7 +264,6 @@ a {
 }
 
 .order-btn {
-  opacity: 0.01;
   z-index: 1;
   position: relative;
   font-weight: 600;
@@ -287,7 +276,7 @@ a {
   border: 2px solid #d44e67;
   background-color: #d44e67;
   color: #fff;
-
+  justify-content: center;
 
   &:hover {
     background-color: #a73d51;
@@ -297,19 +286,6 @@ a {
     transform-origin: 50% 50%;
   }
 
-  &.active {
-    top: 115px;
-    background-color: #000;
-    color: #fff;
-    border: 2px solid #fff;
-
-    &:hover {
-      background-color: #fff;
-      color: #000;
-      border: 3px solid #ffffff;
-
-    }
-  }
 }
 
 }
@@ -674,6 +650,9 @@ a {
       display: flex;
       width: 100%;
       justify-content: space-between;
+      padding: 20px;
+      box-sizing: border-box;
+      flex-wrap: wrap;
 
       &-item {
         display: flex;
@@ -713,6 +692,10 @@ a {
           margin: 4px 0 0;
           color: #999;
           font-weight: bold;
+        }
+
+        @media screen and (max-width: 992px){
+          margin:0 auto 20px;
         }
       }
     }

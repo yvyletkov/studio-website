@@ -6,12 +6,6 @@ window.onload = () => {
         document.body.clientHeight, document.documentElement.clientHeight
     ) - window.innerHeight
 
-    setTimeout(() => unfade(document.querySelector('.home-container__text p:first-child'), 'block'), 500);
-    setTimeout(() => unfade(document.querySelector('.home-container__text p:last-child'), 'block'), 900);
-    setTimeout(() => unfade(document.querySelector('.order-btn'), 'block'), 1200);
-    setTimeout(() => unfade(document.querySelector('.circles__item:nth-of-type(1)'), 'block'), 1750);
-    setTimeout(() => unfade(document.querySelector('.circles__item:nth-of-type(2)'), 'block'), 1850);
-    setTimeout(() => unfade(document.querySelector('.circles__item:nth-of-type(3)'), 'block'), 1950);
 
     window.addEventListener('scroll', () => {
         let scrollHeight = window.pageYOffset;

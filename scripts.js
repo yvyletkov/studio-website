@@ -25,31 +25,16 @@ window.onload = () => {
     }))
 
     document.querySelector('.order-btn').addEventListener('click', openForm)
-
+    setTimeout(() => unfade(document.querySelector('.order-btn')), 100);
 
 }
 
 const openForm = () => {
-    document.querySelectorAll('.form-block, .order-btn').forEach(e => e.classList.add('active'))
-    document.querySelector('.home-container__text').classList.add('hidden')
-    document.querySelectorAll('.label-icon').forEach(e => e.style.display = 'flex')
-    document.querySelectorAll('.label-icon').forEach(e => e.style.opacity = '0')
-    setTimeout(() => unfade(document.querySelector('.contact-us')), 500);
-    setTimeout(() => unfade(document.querySelector('.label-icon:nth-of-type(1)')), 900);
-    setTimeout(() => unfade(document.querySelector('.label-icon:nth-of-type(2)')), 1200);
-    setTimeout(() => unfade(document.querySelector('.label-icon:nth-of-type(3)')), 1500);
-    document.querySelector('.order-btn').removeEventListener('click', openForm)
-
 
 }
 
 const closeForm = () => {
-    document.querySelector('.form-block').classList.remove('active')
-    document.querySelector('.home-container__text').classList.remove('hidden')
-    document.querySelector('.order-btn').classList.remove('active')
-    document.querySelector('.contact-us').style.opacity = '0';
-    document.querySelectorAll('.label-icon').forEach(e => e.style.display = 'none')
-    document.querySelector('.order-btn').addEventListener('click', openForm)
+
 }
 
 function fade(element) {
@@ -78,8 +63,3 @@ function unfade(element, display = 'flex') {
     }, 10);
 }
 
-let scrollHeight = Math.max(
-    document.body.scrollHeight, document.documentElement.scrollHeight,
-    document.body.offsetHeight, document.documentElement.offsetHeight,
-    document.body.clientHeight, document.documentElement.clientHeight
-);

@@ -10,13 +10,9 @@ window.onload = () => {
     window.addEventListener('scroll', () => {
         let scrollHeight = window.pageYOffset;
 
-        const anchorsEl = document.querySelector('.anchors-wrapper')
-        if (scrollHeight > (window.innerHeight - 30)) anchorsEl.classList.add('fixed')
-        else anchorsEl.classList.remove('fixed')
-
         document.querySelector('.scroll-progress-bar').style.width = `${scrollHeight / pageHeight * 100}vw`;
 
-        console.log(`${scrollHeight / pageHeight * 100}vw`)
+        // console.log(`${scrollHeight / pageHeight * 100}vw`)
 
     })
 

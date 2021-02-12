@@ -380,8 +380,10 @@ a {
       background: #f1f1f1;
 
       .portfolio-card__content {
-        padding: 0 40px 0 50px;
+        @media (min-width: 769px) {
+          padding: 0 40px 0 50px;
 
+        }
       }
 
       img {

@@ -10,7 +10,7 @@
     <link rel="stylesheet/less" type="text/css" href="styles.less"/>
     <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
 
-    <title>название.</title>
+    <title>bottle web.</title>
 </head>
 <body>
 
@@ -21,6 +21,7 @@
     <div onclick="document.querySelector('#portfolio').scrollIntoView({behavior: 'smooth'})">наши работы.</div>
     <div onclick="document.querySelector('#services').scrollIntoView({behavior: 'smooth'})">услуги и цены.</div>
     <div onclick="document.querySelector('#team').scrollIntoView({behavior: 'smooth'})">команда.</div>
+    <div onclick="document.querySelector('#contacts').scrollIntoView({behavior: 'smooth'})">контакты.</div>
 </div>
 
 
@@ -78,7 +79,7 @@
 
 <section id='portfolio' class='portfolio'>
 
-    <div class='portfolio__heading'>наши работы.</div>
+    <div class='heading'>наши работы.</div>
 
     <div class='portfolio__card portfolio-card'>
         <div class="portfolio-card__img">
@@ -264,6 +265,31 @@
                 <img src="./img/muzhskaya-territoriya.png" alt="Фото участника"/>
                 <h5>Ярик Водила</h5>
                 <p>Фронтенд разработчик</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="contacts" id="contacts">
+    <div class="container">
+        <h2 class="heading">контакты.</h2>
+
+        <div class="contacts__content">
+            <div class="contacts__left-side">
+                <div class="contacts__emoji">👍</div>
+                <p class="contacts__city">Санкт-Петербург</p>
+                <p class="contacts__phone"><a href="tel:79516562576">+7 951 656-25-76</a></p>
+                <p class="contacts__email"><a href="mailto:studio@bottle-web.ru">studio@bottle-web.ru</a></p>
+                <p class="contacts__socials">
+                    <a class="vk" target="_blank" href="https://vk.com"><img src='img/icons/vk-social-network-logo.svg' alt="VK"></a>
+                    <a class="whats" target="_blank" href="https://api.whatsapp.com/send?phone=?79516562576"><img src='img/icons/whatsapp.svg' alt="WhatsApp"></a>
+                </p>
+            </div>
+
+            <div class="contacts__right-side">
+                <p class="contacts__logo">&lt;bottle/&gt;</p>
+<!--                <div class='contacts__order-btn'>ЗАКАЗАТЬ САЙТ</div>-->
+                <p class="contacts__copyright">© 2021 студия Bottle</p>
             </div>
         </div>
     </div>

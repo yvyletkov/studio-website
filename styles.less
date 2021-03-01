@@ -142,11 +142,11 @@ a {
   zoom: 0.80;
   box-sizing: border-box;
   width: 550px;
-  background: rgb(212, 78, 103);
+  background: #cd4a63;
 
-  background: -moz-linear-gradient(200deg, rgba(212, 78, 103, 1) 6%, rgba(55, 155, 203, 1) 100%);
-  background: -webkit-linear-gradient(200deg, rgba(212, 78, 103, 1) 6%, rgba(55, 155, 203, 1) 100%);
-  background: linear-gradient(200deg, rgba(212, 78, 103, 1) 6%, rgba(55, 155, 203, 1) 100%);
+  background: -moz-linear-gradient(200deg, rgb(205, 74, 99) 6%, rgba(55, 155, 203, 1) 100%);
+  background: -webkit-linear-gradient(200deg, rgb(205, 74, 99) 6%, rgba(55, 155, 203, 1) 100%);
+  background: linear-gradient(200deg, rgb(205, 74, 99) 6%, rgba(55, 155, 203, 1) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d44e67",endColorstr="#379bcb",GradientType=1);
 
   z-index: 1;
@@ -789,7 +789,7 @@ a {
 
   div {
     cursor: pointer;
-    color: #cacaca;
+    color: #d8d8d8;
     font-size: 25px;
     margin: 0 30px;
     transition: all 300ms;
@@ -1051,6 +1051,51 @@ a {
       //border: 2px solid black;
       animation: shake 0.8s infinite linear;
       transform-origin: 50% 50%;
+    }
+  }
+}
+
+.info {
+  background-color: #cd4a63;
+  color: #fff;
+  margin-top: 50px;
+
+  .container {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 70px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    h5 {
+      font-size: 35px;
+      margin-bottom: 35px;
+    }
+
+    p {
+      font-size: 35px;
+      line-height: 1.5;
+    }
+
+    p.answer {
+      margin-left: 25px;
+    }
+
+    p.days {
+      font-size: 70px;
+      font-weight: 700;
+      line-height: 1;
+      margin-bottom: 45px;
+      margin-left: 25px;
+    }
+
+
+    p.desc {
+      font-size: 20px;
     }
   }
 }

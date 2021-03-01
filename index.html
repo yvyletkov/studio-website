@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@200;900&display=swap" rel="stylesheet">
     <link rel="stylesheet/less" type="text/css" href="styles.less"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="//cdn.jsdelivr.net/npm/less@3.13"></script>
 
     <title>Студия Stonks - быстрые сайты на заказ</title>
@@ -81,7 +82,7 @@
 
     <div class='heading'>наши работы.</div>
 
-    <div class='portfolio__card portfolio-card'>
+    <div data-aos="fade-right" data-aos-offset="300" class='portfolio__card portfolio-card'>
         <div class="portfolio-card__img">
             <img src="./img/luch-bar.png" alt="">
         </div>
@@ -104,7 +105,7 @@
         </div>
     </div>
 
-    <div class='portfolio__card portfolio-card'>
+    <div data-aos="fade-left" data-aos-offset="300" class='portfolio__card portfolio-card'>
         <div class="portfolio-card__img">
             <img src="./img/nefteprodukty.png" alt="">
         </div>
@@ -127,7 +128,7 @@
         </div>
     </div>
 
-    <div class='portfolio__card portfolio-card'>
+    <div data-aos="fade-right" data-aos-offset="300" class='portfolio__card portfolio-card'>
         <div class="portfolio-card__img">
             <img src="./img/vyshe-kryshi.png" alt="">
         </div>
@@ -150,7 +151,7 @@
         </div>
     </div>
 
-    <div class='portfolio__card portfolio-card'>
+    <div data-aos="fade-left" data-aos-offset="300" class='portfolio__card portfolio-card'>
         <div class="portfolio-card__img">
             <img src="./img/muzhskaya-territoriya.png" alt="">
         </div>
@@ -182,7 +183,7 @@
 
         <div class="services__content">
 
-            <div class="services__item services-item">
+            <div data-aos="flip-left" data-aos-offset="300" class="services__item services-item">
                 <div class="services-item__circle">
                     <div>
                         <p class="desc__title">Самый быстрый вариант сайта</p>
@@ -206,7 +207,7 @@
 
             </div>
 
-            <div class="services__item services-item">
+            <div data-aos="flip-left" data-aos-offset="300" data-aos-delay="300" class="services__item services-item">
                 <div class="services-item__circle">
                     <div>
                         <p class="desc__title">Быстрый и удобный канал продаж ваших товаров в интернете</p>
@@ -228,7 +229,7 @@
                 </div>
             </div>
 
-            <div class="services__item services-item">
+            <div data-aos="flip-left" data-aos-offset="300" data-aos-delay="600" class="services__item services-item">
                 <div class="services-item__circle">
                     <div>
                         <p class="desc__title">Масштабный, информативный интернет-портал</p>
@@ -274,7 +275,12 @@
 <section class="team" id="team">
     <div class="container">
         <h2 class="heading">наша команда.</h2>
-        <div class="team__content">
+        <div data-aos="fade-zoom-in"
+             data-aos-easing="ease-in-back"
+             data-aos-delay="000"
+             data-aos-offset="300"
+             data-aos-duration="1000"
+             class="team__content">
             <div class="team__content-item">
                 <img src="./img/muzhskaya-territoriya.png" alt="Фото участника"/>
                 <h5>Ярик Водила</h5>
@@ -330,6 +336,10 @@
 </section>
 
 <script src="./scripts.js"></script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 
 </body>
 </html>

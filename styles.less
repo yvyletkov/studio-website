@@ -13,7 +13,10 @@ h1, h2, h3, h4, h5 {
 body {
   overflow-x: hidden;
   background: #f3f3f3;
+}
 
+section {
+  overflow: hidden;
 }
 
 :active, :hover, :focus {
@@ -1076,13 +1079,12 @@ a {
       margin-bottom: 35px;
     }
 
-    p {
-      font-size: 35px;
-      line-height: 1.5;
-    }
-
     p.answer {
-      margin-left: 25px;
+      font-size: 35px;
+      //margin-left: 25px;
+      @media (max-width: 760px) {
+        font-size: 22px;
+      }
     }
 
     p.days {
@@ -1090,14 +1092,28 @@ a {
       font-weight: 700;
       line-height: 1;
       margin-bottom: 45px;
-      margin-left: 25px;
+      //margin-left: 25px;
+      @media (max-width: 760px) {
+        font-size: 50px;
+      }
     }
 
 
     p.desc {
       font-size: 20px;
+      @media (max-width: 760px) {
+        font-size: 17px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      padding: 40px;
     }
   }
+
+
 }
+
+
 
 
